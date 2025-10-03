@@ -1,0 +1,80 @@
+================================================================================
+WEIGHTED VOTING SYSTEM - IMPLEMENTATION SUMMARY
+================================================================================
+
+COMPLETED: Successfully implemented weighted voting system in consensus_voting_interactive.py
+
+USER WEIGHTS CONFIGURED:
+  - nhhoangthong:     1.5 points (highest priority)
+  - dangdoai3:        1.4 points
+  - ah3cu102:         1.3 points
+  - quangvinh02200:   1.2 points
+  - Default (others): 1.0 points
+
+KEY FEATURES:
+1. Highest-Weighted User Selection
+   - Automatically picks the vote from the user with highest weight
+   - Simple and direct: nhhoangthong (1.5) always wins over others
+   
+2. Conflict Resolution
+   - Detects when weighted winner differs from simple majority
+   - Auto mode: automatically selects weighted winner
+   - Interactive mode: shows both options, suggests weighted winner
+   
+3. Edge Case Handling
+   - Unknown users get default weight (1.0)
+   - Perfect agreement bypasses weighted voting
+   - Empty annotations handled gracefully
+   - Ties resolved deterministically
+
+4. Backward Compatibility
+   - Existing functionality preserved
+   - Can disable weighted voting with --no-weighted flag
+   - All original features still work
+
+MODIFIED FILES:
+  - D:/AI_Tranning/ai_training/scripts/consensus_voting_interactive.py
+  
+BACKUP CREATED:
+  - D:/AI_Tranning/ai_training/scripts/consensus_voting_interactive.py.backup
+
+NEW FUNCTIONS ADDED:
+  - get_user_weight(annotator): Extracts username and returns weight
+  - weighted_vote(values, annotations): Calculates weighted voting result
+
+MODIFIED FUNCTIONS:
+  - display_annotations(): Now shows weights and weighted scores
+  - majority_vote_with_review(): Uses weighted voting logic
+  - consensus_with_manager_review(): Added use_weighted parameter
+  - main(): Added --no-weighted command line option
+
+USAGE EXAMPLES:
+
+  # Auto mode with weighted voting (default)
+  python consensus_voting_interactive.py data.csv --auto
+  
+  # Interactive mode with weighted voting
+  python consensus_voting_interactive.py data.csv
+  
+  # Disable weighted voting (use simple majority)
+  python consensus_voting_interactive.py data.csv --no-weighted
+
+TESTING:
+  All tests passed successfully:
+  ✓ User weight retrieval
+  ✓ Weighted score calculation
+  ✓ Conflict resolution (weighted overrides simple majority)
+  ✓ Highest weight wins when all annotators differ
+  ✓ Unknown users get default weight
+
+DOCUMENTATION:
+  - Full documentation: D:/AI_Tranning/ai_training/scripts/WEIGHTED_VOTING_README.md
+  - Includes examples, scenarios, and technical details
+
+VERIFICATION:
+  - Syntax check: PASSED
+  - All test cases: PASSED
+  - Ready for production use
+
+STATUS: ✓ COMPLETE AND TESTED
+================================================================================

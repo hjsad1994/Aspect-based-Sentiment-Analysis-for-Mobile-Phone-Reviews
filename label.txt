@@ -1,0 +1,145 @@
+<View>
+    <Style>
+        .lsf-main-content { font-size: 16px; }
+  
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+  
+        .aspect-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+  
+        .aspect-label {
+            font-weight: bold;
+            width: 110px;
+        }
+    </Style>
+  
+    <Header value="Đánh giá bình luận theo từng khía cạnh"/>
+    <Text name="text" value="$data" style="font-size: 25px;"/>
+    <View style="margin-top: 5px;"/>
+  
+    <View className="grid-container">
+  
+        <View className="aspect-row">
+            <HyperText name="battery_label" value="&lt;span style='color:purple'&gt;■&lt;/span&gt; &lt;b&gt;Battery&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Battery" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="1"/>
+                <Choice value="Negative" hotkey="2"/>
+                <Choice value="Neutral" hotkey="3"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="camera_label" value="&lt;span style='color:red'&gt;■&lt;/span&gt; &lt;b&gt;Camera&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Camera" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="4"/>
+                <Choice value="Negative" hotkey="5"/>
+                <Choice value="Neutral" hotkey="6"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="performance_label" value="&lt;span style='color:green'&gt;■&lt;/span&gt; &lt;b&gt;Performance&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Performance" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="q"/>
+                <Choice value="Negative" hotkey="w"/>
+                <Choice value="Neutral" hotkey="e"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="software_label" value="&lt;span style='color:cyan'&gt;■&lt;/span&gt; &lt;b&gt;Software&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Software" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="p"/>
+                <Choice value="Negative" hotkey="m"/>
+                <Choice value="Neutral" hotkey=";"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="display_label" value="&lt;span style='color:brown'&gt;■&lt;/span&gt; &lt;b&gt;Display&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Display" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="a"/>
+                <Choice value="Negative" hotkey="s"/>
+                <Choice value="Neutral" hotkey="d"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="design_label" value="&lt;span style='color:pink'&gt;■&lt;/span&gt; &lt;b&gt;Design&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Design" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="z"/>
+                <Choice value="Negative" hotkey="x"/>
+                <Choice value="Neutral" hotkey="c"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="price_label" value="&lt;span style='color:orange'&gt;■&lt;/span&gt; &lt;b&gt;Price&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Price" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="r"/>
+                <Choice value="Negative" hotkey="t"/>
+                <Choice value="Neutral" hotkey="y"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="warranty_label" value="&lt;span style='color:teal'&gt;■&lt;/span&gt; &lt;b&gt;Warranty&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Warranty" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="f"/>
+                <Choice value="Negative" hotkey="g"/>
+                <Choice value="Neutral" hotkey="h"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="shop_service_label" value="&lt;span style='color:olive'&gt;■&lt;/span&gt; &lt;b&gt;Shop_Service&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Shop_Service" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="v"/>
+                <Choice value="Negative" hotkey="b"/>
+                <Choice value="Neutral" hotkey="n"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="shipping_label" value="&lt;span style='color:blue'&gt;■&lt;/span&gt; &lt;b&gt;Shipping&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="shipping" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="j"/>
+                <Choice value="Negative" hotkey="k"/>
+                <Choice value="Neutral" hotkey="l"/>
+            </Choices>
+        </View>
+        
+        <View className="aspect-row">
+            <HyperText name="packaging_label" value="&lt;span style='color:grey'&gt;■&lt;/span&gt; &lt;b&gt;Packaging&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Packaging" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="u"/>
+                <Choice value="Negative" hotkey="i"/>
+                <Choice value="Neutral" hotkey="o"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="general_label" value="&lt;span style='color:maroon'&gt;■&lt;/span&gt; &lt;b&gt;General&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="General" toName="text" showInline="true" required="false">
+                <Choice value="Positive" hotkey="7"/>
+                <Choice value="Negative" hotkey="8"/>
+                <Choice value="Neutral" hotkey="9"/>
+            </Choices>
+        </View>
+  
+        <View className="aspect-row">
+            <HyperText name="others_label" value="&lt;span style='color:black'&gt;■&lt;/span&gt; &lt;b&gt;Others&lt;/b&gt;" className="aspect-label"/>
+            <Choices name="Others" toName="text" showInline="true" required="false">
+                <Choice value="Neutral" hotkey="0"/>
+            </Choices>
+        </View>
+  
+    </View> 
+  </View>

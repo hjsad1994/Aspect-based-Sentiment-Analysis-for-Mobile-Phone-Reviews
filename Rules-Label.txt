@@ -1,0 +1,66 @@
+Warranty (Bảo hành)
+Warranty: "Chính sách bảo hành của shop rất tốt, hỗ trợ nhanh chóng." -> pos
+Warranty: "Gửi đi bảo hành cả tháng trời không thấy phản hồi." -> neg
+Warranty: "Sản phẩm được bảo hành chính hãng 12 tháng." -> neu
+
+Price (Giá cả)
+Price: "Giá rẻ hơn các shop khác mà chất lượng vẫn vậy, rất đáng tiền." -> pos
+Price: "Giá hơi cao so với mặt bằng chung." -> neg
+Price: "Sản phẩm có giá niêm yết là 10 triệu đồng." -> neu
+
+Performance (Hiệu năng)
+Performance: "Máy chạy mượt, xử lý tác vụ nặng không bị giật lag." -> pos
+Performance: "Chơi game được 15 phút là máy nóng ran và bắt đầu giật lag." -> neg
+Performance: "Máy sử dụng con chip Snapdragon 8 Gen 2." -> neu
+
+Display (Màn hình)
+Display: "Màn hình rất đẹp, màu sắc sống động, xem phim cực đã." -> pos
+Display: "Màn hình của máy bị ám vàng nhẹ ở các góc." -> neg
+Display: "Màn hình có kích thước 6.7 inch, độ phân giải Full HD+." -> neu
+
+Camera
+Camera: "Camera sau chụp ảnh rất nét, màu sắc lên đẹp, chống rung tốt." -> pos
+Camera: "Camera chụp thiếu sáng rất tệ, ảnh bị nhiễu và bệt màu." -> neg
+Camera: "Máy có cụm 3 camera sau với camera chính 108MP." -> neu
+
+Battery (Pin)
+Battery: "Pin dùng rất trâu, có thể onscreen liên tục 8 tiếng." -> pos
+Battery: "Pin tụt quá nhanh, dùng chưa đến nửa ngày đã phải sạc lại." -> neg
+Battery: "Dung lượng pin của máy là 5000mAh." -> neu
+
+Design (Thiết kế)
+Design: "Thiết kế nguyên khối cầm rất chắc tay và sang trọng." -> pos
+Design: "Mặt lưng nhựa bám nhiều vân tay và cho cảm giác ọp ẹp." -> neg
+Design: "Máy có mặt lưng kính và khung viền bằng kim loại." -> neu
+
+Software (Phần mềm)
+Software: "Giao diện phần mềm thân thiện, dễ sử dụng, ít ứng dụng rác." -> pos
+Software: "Phần mềm còn nhiều lỗi vặt, thỉnh thoảng bị văng ứng dụng." -> neg
+Software: "Thiết bị được cài đặt sẵn hệ điều hành Android 13." -> neu
+
+shipping (Giao hàng)
+shipping: "Shop giao hàng rất nhanh, đặt hôm trước hôm sau đã nhận được." -> pos
+shipping: "Giao hàng quá lâu, mất cả tuần mới tới nơi." -> neg
+shipping: "Đơn hàng đang được vận chuyển bởi đơn vị Giao Hàng Nhanh." -> neu
+
+Packaging (Đóng gói)
+Packaging: "Sản phẩm được đóng gói rất cẩn thận, hộp cứng cáp và có nhiều lớp chống sốc." -> pos
+Packaging: "Đóng gói quá sơ sài, hộp hàng bị móp méo và rách khi nhận." -> neg
+Packaging: "Sản phẩm được đựng trong hộp carton của nhà sản xuất." -> neu
+
+Shop_Service (Dịch vụ của cửa hàng)
+Shop_Service: "Shop tư vấn rất nhiệt tình, trả lời tin nhắn nhanh, giải đáp mọi thắc mắc." -> pos
+Shop_Service: "Nhắn tin hỏi shop cả ngày không thèm trả lời." -> neg
+Shop_Service: "Mình đã nhắn tin cho shop để hỏi về tình trạng đơn hàng." -> neu
+
+General (Chung chung & Phụ kiện/Quà tặng)
+(Dùng khi bình luận mang tính tổng thể hoặc nói về phụ kiện, quà tặng... mà không thuộc các khía cạnh cụ thể ở trên)
+General: "Sản phẩm dùng tốt, shop còn chu đáo tặng kèm ốp lưng và dán màn hình." -> pos
+General: "Trải nghiệm tệ, sản phẩm không như mô tả và trong hộp cũng không có củ sạc đi kèm." -> neg
+General: "Đây là lần đầu mình mua hàng, phụ kiện trong hộp có cáp sạc và sách hướng dẫn." -> neu
+
+Others (Chỉ dùng cho SPAM)
+(Dùng để lọc các nội dung không liên quan, quảng cáo, vô nghĩa)
+Others: "Ai cần vay vốn, làm thẻ tín dụng thủ tục nhanh thì liên hệ Zalo 09******** nhé." -> spam
+Others: "Tuyển nhân viên bán hàng online, làm tại nhà, lương 10tr/tháng." -> spam
+Others: "asdfhaskjdfhaskjdfhalskdfhalskdfh" -> spam

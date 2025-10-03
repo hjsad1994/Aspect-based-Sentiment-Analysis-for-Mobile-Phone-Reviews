@@ -32,9 +32,51 @@ def json_to_csv(json_file, csv_file):
         print("⚠ File JSON trống!")
         return
     
-    # Lấy tất cả các key từ bản ghi đầu tiên làm header
-    headers = list(data[0].keys())
+    # Thu thập tất cả các key và chuẩn hóa (case-insensitive)
+    # Tạo mapping từ lowercase key -> preferred key (first occurrence hoặc capitalized)
+    key_mapping = {}
+    for record in data:
+        for key in record.keys():
+            key_lower = key.lower()
+            if key_lower not in key_mapping:
+                key_mapping[key_lower] = key
+            else:
+                # Ưu tiên key có chữ cái đầu viết hoa (Shipping > shipping)
+                existing = key_mapping[key_lower]
+                if key[0].isupper() and not existing[0].isupper():
+                    key_mapping[key_lower] = key
+    
+    # Sử dụng preferred keys làm headers
+    headers = sorted(list(key_mapping.values()))
     print(f"Các cột: {', '.join(headers)}")
+    
+    # Chuẩn hóa dữ liệu - merge các key có cùng tên (case-insensitive)
+    normalized_data = []
+    for record in data:
+        normalized_record = {}
+        for header in headers:
+            header_lower = header.lower()
+            # Tìm tất cả các key phù hợp và merge giá trị (ưu tiên giá trị không rỗng)
+            values = []
+            for key in record.keys():
+                if key.lower() == header_lower:
+                    value = record[key]
+                    if value is not None and value != '':
+                        values.append(value)
+            
+            # Ưu tiên giá trị không rỗng
+            if values:
+                normalized_record[header] = values[0]  # Lấy giá trị không rỗng đầu tiên
+            else:
+                # Nếu tất cả đều rỗng hoặc không có, lấy giá trị rỗng
+                for key in record.keys():
+                    if key.lower() == header_lower:
+                        normalized_record[header] = record[key] if record[key] is not None else ''
+                        break
+                else:
+                    normalized_record[header] = ''
+        
+        normalized_data.append(normalized_record)
     
     # Ghi ra file CSV
     print(f"\nĐang ghi file CSV: {csv_file}")
@@ -45,7 +87,7 @@ def json_to_csv(json_file, csv_file):
         writer.writeheader()
         
         # Ghi các hàng dữ liệu
-        for row in data:
+        for row in normalized_data:
             writer.writerow(row)
     
     print(f"\n✓ Đã chuyển đổi thành công!")
